@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Xavi Quilis">
+    <title>Ficha Película</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="imagenBackgroundFicha">
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="14.png" alt="Identificador de Anival"></a>
+        </div>
+        <h1>
+            <div class="navbar">
+                <a href="index.html">Contenidos</a>
+                <a href="sobre el festival.html">Sobre el festival</a>
+                <a href="programación.html">Programación</a>
+                <a href="#">Búsqueda</a>
+                <a href="#">Contacto</a>
+            </div>
+        </h1>
+        <div class="iconoPerro">
+            <a href="#"><img src="iconoconfig.png" alt="icono configuracion"></a>
+            <a href="#"><img src="iconoperro.png" alt="icono perro"></a>
+    </div>
+    </header>
+    <div class="columnasFP">
+        <div class="ficha">
+            <h2 id="titulo">Título de la Película</h2>
+            <p><img id="imagen" src="#" alt="Cartel de la película"></p>
+            <p id="descripcion">Descripción de la Película</p>
+        </div>
+        <div class="fichaDos">
+            <h2>Sinopsis</h2>
+            <p id="sinopsis">Sinopsis de la Película</p>
+           <h2>Proyecciones</h2> <table class="horarios">
+                
+                <tr>
+                    <th>Día</th>
+                    <th></th>
+                    <th>Horarios</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>17:00h</td>
+                    <td>19:00h</td>
+                    <td>21:00h</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>17:30h</td>
+                    <td>19:30h</td>
+                    <td>21:30h</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>18:00h</td>
+                    <td>20:00h</td>
+                    <td>22:00h</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>18:30h</td>
+                    <td>20:30h</td>
+                    <td>22:30h</td>
+                </tr>
+            </table>
+        </div>
+        <div class="fichaTres">
+            <h2>Ficha Técnica</h2>
+            <ul id="ficha-tecnica">
+                <li><strong>Título original:</strong> <span id="titulo-original"></span></li>
+                <li><strong>Año:</strong> <span id="anio"></span></li>
+                <li><strong>Duración:</strong> <span id="duracion"></span></li>
+                <li><strong>País:</strong> <span id="pais"></span></li>
+                <li><strong>Dirección:</strong> <span id="direccion"></span></li>
+                <li><strong>Guion:</strong> <span id="guion"></span></li>
+                <li><strong>Novela:</strong> <span id="novela"></span></li>
+                <li><strong>Música:</strong> <span id="musica"></span></li>
+                <li><strong>Fotografía:</strong> <span id="fotografia"></span></li>
+                <li><strong>Compañías:</strong> <span id="companias"></span></li>
+                <li><strong>Género:</strong> <span id="genero"></span></li>
+            </ul>
+        </div>
+        <div class="fichaCuatro">
+            <h2>Reparto</h2>
+            <ul id="reparto-lista"></ul>
+        </div>
+    </div>
+    <footer>
+        <div class="iconosRedes">
+            <p><a href="#"><img src="imagenes/face.png" alt="icono configuracion" width="50px" height="50px"></a></p>
+            <p><a href="#"><img src="imagenes/insta.png" alt="icono configuracion" width="50px" height="50px"></a></p>
+            <p><a href="#"><img src="imagenes/meta.png" alt="icono configuracion" width="50px" height="50px"></a></p>
+            <p><a href="#"><img src="imagenes/youtube.png" alt="icono configuracion" width="50px" height="50px"></a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
+    <Script>
+        document.addEventListener("DOMContentLoaded", function() {  /* Para ejecutar la funcion*/
+            const params = new URLSearchParams(window.location.search);  /* Busca el signo ? en la página*/
+            const peliculaId = params.get("pelicula");  /* Objeto e Id para las peliculas*/
+
+            const peliculas = {
+                1: {
+                    titulo: "Call of the Wild",
+                    descripcion: "Una emocionante aventura en la naturaleza.",
+                    imagen: "call_of_the_wild.jpg",
+                    sinopsis: "Jack Thornton un buscador de oro, compra un San Bernardo al que llama Buck. Los problemas surgen cuando Buck muerde a otro buscador de oro, quiere matarlo para vengarse. Jack llega a un acuerdo que consiste en hacer una carrera de trineos, cuyo vencedor se quedará con Buck",
+                    reparto: ["Clark Gable", "Loretta Young", "Jack Oakie","Reginald Owen","Frank Conroy","Katherine DeMille","Sidney Toler","James Burke","Charles Stevens","Lalo Encinas","Thomas E. Jackson","Russ Powell","Herman Bing","George McQuarrie" 
+],
+                    tituloOriginal: "The Call of the Wild",
+                    anio: "1935",
+                    duracion: "78 min",
+                    pais: "Estados Unidos",
+                    direccion: "William A. Wellman",
+                    guion: "Gene Fowler, Leonard Praskins",
+                    novela: "Jack London",
+                    musica: "Alfred Newman",
+                    fotografia: "Charles Rosher",
+                    companias: "20th Century Fox",
+                    genero: "Aventura, Drama"
+                },
+                2: {
+                    titulo: "Boris Karloff: The Ape",
+                    descripcion: "Un clásico del cine de terror.",
+                    imagen: "imagenes/boris_karloff-the_ape.jpg",
+                    sinopsis: "Dr. Bernard Adrian es un amable científico loco que busca curar la polio de una joven. Necesita líquido espinal de un humano para completar la fórmula de su suero experimental.",
+                    reparto: ["Boris Karloff", "Maris Wrixon", "Gene O'Donnell"],
+                    tituloOriginal: "The Ape",
+                    anio: "1940",
+                    duracion: "62 min",
+                    pais: "Estados Unidos",
+                    direccion: "William Nigh",
+                    guion: "Curt Siodmak",
+                    novela: "Adam Hull Shirk",
+                    musica: "Edward J. Kay",
+                    fotografia: "Harry Neumann",
+                    companias: "Monogram Pictures",
+                    genero: "Terror, Ciencia Ficción"
+                },
+                3: {
+                    titulo: "Boy Meets Dog",
+                    descripcion: "Una historia conmovedora de amistad.",
+                    imagen: "imagenes/boy_meets_dog.webp",
+                    sinopsis: " La trama trata de un chico que tiene un padre gruñón, el niño huye, conoce a un perro y se une a una pandilla de niños..",
+                    reparto: [" Billy Bletcher 	Billy Bletcher-Padre (voz) (no acreditada)","Los Ritthmettes-Cantantes (no acreditado)","Walter Tetley-Bobby (voz) (no acreditada)","Joe Twerp-Alguacil (no acreditado) "],
+                    tituloOriginal: "Boy Meets Dog",
+                    anio: "1938",
+                    duracion: "9 min",
+                    pais: "Estados Unidos",
+                    direccion: "Walter Lantz",
+                    guion: "Gene Byrnes,Victor McLeod",
+                    novela: "Gene Byrnes,Victor McLeod",
+                    musica: "Frank Churchill",
+                    fotografia: "Edición de: Eugene W. Castillo",
+                    companias: "Walter Lantz Productions",
+                    genero: "Animación"
+                },
+                4: {
+                    titulo: "Bride of the Gorilla",
+                    descripcion: "Un thriller de terror.",
+                    imagen:  "imagenes/Bride_of_the_Gorilla_1951.jpg",
+                    sinopsis: "La dueña de una plantación en la selva se casa con una hermosa mujer. Poco después, está plagado de una extraña maldición vudú que lo transforma en un gorila.",
+                    reparto: ["Barbara Payton","Lon Chaney Jr.","Raymond Burr","Tom Conway","Paul Cavanagh","Gisela Werbisek","Carol Varga","Paul Maxey","Woody Strode","Martín Garralaga","Felippa Rock","Moyna MacGill"],
+                    tituloOriginal: "Bride of the Gorilla",
+                    anio: "1951",
+                    duracion: "70 min",
+                    pais: "Estados Unidos",
+                    direccion: "Curt Siodmak",
+                    guion: "Curt Siodmak",
+                    novela: "Curt Siodmak",
+                    musica: "Raoul Kraushaar-(música por), Mort Glickman-(no acreditado) ",
+                    fotografia: "Charles Van Enger",
+                    companias: "Jack Broder Productions",
+                    genero: "Terror"
+                },
+                5: {
+                    titulo: "Devil Bat",
+                    descripcion: "Un clásico del cine de terror.",
+                    imagen:  "imagenes/Devil-bat-poster.jpg" ,
+                    sinopsis: "Un científico loco desarrolla una loción de aftershave que hace que sus gigantescos murciélagos mate a cualquiera que la use",
+                    reparto: ["Bela Lugosi","Suzanne Kaaren","Dave O'Brien","Guy Usher","Yolande Donlan","Donald Kerr","Edmund Mortimer","Gene O'Donnell","Alan Baldwin","John Ellis","Arthur Q. Bryan","Precio Hal","John Davidson","Billy Griffith","Wally Rairden"],
+                    tituloOriginal: "Devil Bat",
+                    anio: "1940",
+                    duracion: "68 min",
+                    pais: "Estados Unidos",
+                    direccion: "    Jean Yarbrough",
+                    guion: "    John T. Neville,George Bricker",
+                    novela: "George Bricker",
+                    musica: "David Chudnow",
+                    fotografia: "Arthur Martinelli",
+                    companias: "Producers Releasing Corporation (PRC)",
+                    genero: "Terror"
+                },
+                6: {
+                    titulo: "The Painted Hills",
+                    descripcion: "Una aventura en la naturaleza.",
+                    imagen: "imagenes/the_painted_hills-878949159-large.jpg" ,
+                    sinopsis: " Jonathan Harvey es un buscador de oro que ha pasado años en las montañas con su fiel perro collie, Shep (interpretado por Pal, conocido como 'Lassie'). Finalmente, Jonathan encuentra oro y regresa a la ciudad, solo para descubrir que su socio ha fallecido, dejando a su hijo Tommy sin familia. Jonathan decide cuidar de Tommy, pero pronto se enfrenta a la codicia y la traición de Lin Taylor, un antiguo socio que intenta robar el oro. Con la ayuda de Shep, Jonathan y Tommy deberán superar estos desafíos y proteger su tesoro",
+                    reparto: [" Pal ('Lassie')","Paul Kelly" ,"Bruce Cowling" ,"Gary Gray" ,"Ann Doran" ,"Art Smith" ,"Andrea Virginia Lester" ,"Chief Yowlachie","Brown Jug Reynolds "],
+                    tituloOriginal: "The Painted Hills",
+                    anio: "1951",
+                    duracion: "78 min",
+                    pais: "Estados Unidos",
+                    direccion: "Harold F. Kress ",
+                    guion: "True Boardman",
+                    novela: "Alexander Hull ",
+                    musica: "Daniele Amfitheatrof ",
+                    fotografia: "Alfred Gilks, Harold Lipstein ",
+                    companias: "Metro-Goldwyn-Mayer (MGM)",
+                    genero: "Aventura"
+                },
+                7: {
+                    titulo: "Lost Jungle",
+                    descripcion: "Una emocionante aventura.",
+                    imagen: "imagenes/lostjungle-1934.jpg" ,
+                    sinopsis: "El entrenador de animales Clyde Beatty encabeza una fiesta de rescate en busca de su chica, Ruth, y su padre que se pierden buscando una isla desconocida. Su dirigible se estrella contra las selvas de la isla. Cuando localiza a Ruth, se entera de que su padre ha desaparecido. La búsqueda se ve obstaculizada por cazadores de oro codiciados y animales salvajes..",
+                    reparto: ["Beatty Clyde","Syd Saylor","Cecilia Parker","Edward LeSaint","Warner Richmond","Wheeler Oakman","Lew Meehan","Max Wagner","Hal Taliaferro","Ernie Adams","Jack Carlyle","Maston Williams","Wes Warner","Slim Whitaker","Jim Corey"],
+                    tituloOriginal: "Lost Jungle",
+                    anio: "1934",
+                    duracion: "243 min",
+                    pais: "Estados Unidos",
+                    direccion: "David Howard,Armand Schaefer",
+                    guion: "Al Martin,Sherman L. Lowe",
+                    novela: "Jack London",
+                    musica: "David Broekman,compositor: música de stock (sin acreditar), Hal Chasnoff,director musical (sin acreditar) ",
+                    fotografia: "Charles Rosher",
+                    companias: "Mascot Pictures (Mascot Pictures Corporation)",
+                    genero: "Aventura"
+                },
+                8: {
+                    titulo: "It's Got Me Again",
+                    descripcion: "Una divertida comedia.",
+                    imagen: "imagenes/its_got_me_again.png",
+                    sinopsis: "Unos ratones organizan una fiesta en una tienda de música y son sorprendidos por un gato, a quien deberán vencer.",
+                    reparto: ["Los Ritthmettes-Vocalistas (no acreditado)"],
+                    tituloOriginal: "It's Got Me Again",
+                    anio: "1932",
+                    duracion: "7 min",
+                    pais: "Estados Unidos",
+                    direccion: "Rudolf Ising",
+                    guion: "Sin acreditar",
+                    novela: "Sin acreditar",
+                    musica: "Frank Marsales",
+                    fotografia:"Sin acreditar",
+                    companias: "Warner Bros, Leon Schlesinger Studios, Harman-Ising Productions",
+                    genero: "Animación, Comedia"
+                },
+                9: {
+                    titulo: "Goopy Geer",
+                    descripcion: "Una historia divertida.",
+                    imagen: "imagenes/goopy.jpg" ,
+                    sinopsis: "Los clientes en una bar claman por Goopy Geer, que luego sale al escenario y los entretiene tocando el piano, primero con los dedos y sus oídos, más tarde con sus guantes animados",
+                    reparto: ["Marcellite Garner","Rudolf ising","Johnny Murray"],
+                    tituloOriginal: "Goopy Geer",
+                    anio: "1932",
+                    duracion: "7 min",
+                    pais: "Estados Unidos",
+                    direccion: "Rudolf ising, Hugh Harman",
+                    guion: "Sin acreditar",
+                    novela: "Sin acreditar",
+                    musica: "Frank Marsales",
+                    fotografia: "Sin acreditar",
+                    companias: "Warner Bros, Leon Schlesinger Studios, Harman-Ising Productions",
+                    genero: "Animación"
+                },
+                10: {
+                    titulo: "Lady, Play Your Mandolin",
+                    descripcion: "Una historia épica.",
+                    imagen: "imagenes/in-the-beginnning-1600855559.jpg",
+                    sinopsis: "Foxy entra y los clientes se vuelven muy salvajes.",
+                    reparto: ["Ken Darby","Rochelle Hudson","Johnny Murray"],
+                    tituloOriginal: "Lady, Play Your Mandolin",
+                    anio: "1931",
+                    duracion: "7 min",
+                    pais: "Estados Unidos",
+                    direccion: "Hugh Harman, Rudolf ising",
+                    guion: "Sin acreditar",
+                    novela: "Sin acreditar",
+                    musica: "Frank Marsales",
+                    fotografia: "Sin acreditar",
+                    companias: "Warner Bros, Leon Schlesinger Studios, Harman-Ising Productions",
+                    genero: "Animación"
+                }
+            };
+
+            if (peliculas[peliculaId]) {
+                document.getElementById("titulo").textContent = peliculas[peliculaId].titulo;
+                document.getElementById("descripcion").textContent = peliculas[peliculaId].descripcion;
+                document.getElementById("imagen").src = peliculas[peliculaId].imagen;
+                document.getElementById("sinopsis").textContent = peliculas[peliculaId].sinopsis;
+                document.getElementById("titulo-original").textContent = peliculas[peliculaId].tituloOriginal;
+                document.getElementById("anio").textContent = peliculas[peliculaId].anio;
+                document.getElementById("duracion").textContent = peliculas[peliculaId].duracion;
+                document.getElementById("pais").textContent = peliculas[peliculaId].pais;
+                document.getElementById("direccion").textContent = peliculas[peliculaId].direccion;
+                document.getElementById("guion").textContent = peliculas[peliculaId].guion;
+                document.getElementById("novela").textContent = peliculas[peliculaId].novela;
+                document.getElementById("musica").textContent = peliculas[peliculaId].musica;
+                document.getElementById("fotografia").textContent = peliculas[peliculaId].fotografia;
+                document.getElementById("companias").textContent = peliculas[peliculaId].companias;
+                document.getElementById("genero").textContent = peliculas[peliculaId].genero;
+
+               
+                const repartoLista = document.getElementById("reparto-lista");
+                peliculas[peliculaId].reparto.forEach(actor => {
+                    const li = document.createElement("li");
+                    li.textContent = actor;
+                    repartoLista.appendChild(li);
+                });
+            } else {
+                document.getElementById("titulo").textContent = "Película no encontrada";
+                document.getElementById("descripcion").textContent = "";
+                document.getElementById("imagen").src = "";
+                document.getElementById("sinopsis").textContent = "";
+                document.getElementById("reparto-lista").textContent = "";
+            }
+        });
+    </Script>

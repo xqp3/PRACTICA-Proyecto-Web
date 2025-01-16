@@ -1,0 +1,424 @@
+html, body {
+    width:100%;
+    height: 100%; /* Asegura que el html y el body ocupen el 100% de la altura */
+    margin: 0; /* Elimina los márgenes por defecto */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+}
+body { 
+    height: auto;
+    font-family:'Verdana', sans-serif; /*Tipografía para la pagina */
+    margin: 0; /* quitar margen */
+    padding: 0; /*quitar espacio */
+    display: flex; /*Flexbox */
+    flex-direction: column; /* Organizar en una columna */
+    align-items: center; /* Centrar horizontalmente */
+  
+    flex: 1; /* Hace que el body ocupe el espacio disponible */
+}
+.imagenBackgroundIndex {
+    background-image: url("imagenes/MOOD333.png"); /* Ruta de la imagen de fondo */
+    background-blend-mode: overlay; /* Combina la imagen de fondo con el color */
+     background-color: rgba(255, 255, 255, 0.5);
+    
+      background-size:cover; /* Ajusta la imagen para que cubra todo el fondo */
+       background-position:top; /* Centra la imagen de fondo */
+       background-repeat:repeat; /* Hace que la imagen se repita */ 
+        
+    }
+    .imagenBackgroundFestival {
+        background-image: url("imagenes/MOOD333.png"); /* Ruta de la imagen de fondo */
+        background-blend-mode: overlay; /* Combina la imagen de fondo con el color */
+         background-color: rgba(255, 255, 255, 0.5);
+        
+          background-size:cover; /* Ajusta la imagen para que cubra todo el fondo */
+           background-position:top; /* Centra la imagen de fondo */
+           background-repeat:repeat; /* Hace que la imagen se repita */  
+         
+        }
+        .imagenBackgroundProgramacion {
+            background-image: url("imagenes/MOOD333.png"); /* Ruta de la imagen de fondo */
+            background-blend-mode: overlay; /* Combina la imagen de fondo con el color */
+             background-color: rgba(255, 255, 255, 0.5);
+            
+              background-size:cover; /* Ajusta la imagen para que cubra todo el fondo */
+               background-position:top; /* Centra la imagen de fondo */
+                background-repeat:repeat; /* Hace que la imagen se repita */ 
+            }
+            .imagenBackgroundFicha {
+                background-image: url("imagenes/5.jpeg"); /* Ruta de la imagen de fondo */
+                background-blend-mode: overlay; /* Combina la imagen de fondo con el color */
+                 background-color: rgba(255, 255, 255, 0.5);
+                
+                  background-size:cover; /* Ajusta la imagen para que cubra todo el fondo */
+                   background-position:top; /* Centra la imagen de fondo */
+                   background-repeat:repeat; /* Hace que la imagen se repita */ 
+                }
+.columnas { 
+   
+        display: flex; /* Flexbox */
+    flex-direction: row; /* Organiza en una fila */
+    width: 100%; /* Ancho al 100% */
+    min-width: 100px; /*Ancho mínimo */
+    padding: 20px; /* Añade espacio alrededor de las columnas */
+        flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+       
+}
+    header {
+    display: flex; /*Flexbox*/
+    justify-content: space-between; /* Distribuye elementos */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /*Ancho del header al 100% */
+       padding: 10px; /*Espacio alrededor del header */
+    }
+.logo img {
+    width: 130px; /* ancho*/
+    height: auto; /* Altura */
+}
+.iconoPerro {
+    display: flex; /*Flexbox */
+    position: relative; /* posicion*/
+    top: -55px; /*espaciado arriba*/
+    right: 10px; /*espaciado derecho*/
+}
+.iconoPerro img {
+    width: 35px; /*Ancho de los iconos */
+    margin: 2px;
+    height: auto; /*Altura automática */
+}
+.navbar { 
+    display: flex; /*Flexbox*/
+    justify-content: center; /* Centra los enlaces de navegación */
+    text-align: center;
+    width: 100%; /*Barra de navegación al 100% de ancho*/
+    margin-top: 20px; /*Margen superior */
+    font-size: 15pt; /*Tamaño de la fuente */
+    flex-wrap: wrap; /*Se ajusten en varias líneas si es necesario */
+    background-color: #d4bfa2;
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de las columnas */
+    } 
+    .navbar a { 
+    padding: 20px 40px; /* Añade espacio alrededor de los enlaces */
+    display: flex; /* Agrupa */
+    align-items: center; /*Centra el contenido*/
+    text-align: center; /* Centra el texto */ 
+    color: rgb(0, 0, 0); /*Color del texto */
+    text-decoration: none; /* Elimina el subrayado del texto */
+    flex: 1; /*Los enlaces se ajusten al ancho */
+    min-width: 100px; /*Ancho mínimo */
+    border-radius: 15px; /* Redondea las esquinas */
+    } 
+    .navbar a:hover { 
+    text-align: center;
+    background-color: #2489B6; /* Cambia el color de fondo al pasar el ratón */
+    color: rgb(255, 255, 255); /* Cambia el color del texto al pasar el ratón */
+    }
+        .navbar a:active { 
+             background-color: #DCE1F2; /* Cambia el color de fondo al hacer clic */
+             color: rgb(255, 255, 255); /* Cambia el color del texto al hacer clic */
+        }
+.column { 
+    display: flex; /* Flexbox  */
+    flex-direction: column; /* Organiza en una columna */
+    
+    background-color: #fff; /*Color de fondo */
+    padding: 20px; /* Añade espacio alrededor de las columnas */
+    margin: 10px; /* Añade un margen alrededor de las columnas */
+    flex: 1; /* Hace que las columnas se ajusten al ancho disponible */
+    text-align: center; /* Centra el texto */
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de las columnas */
+    background-color: #173D6D;
+    color: #E4E0D4;
+}
+.column img {
+    width:fit-content;
+    height: 250px;
+}
+.columnU {
+    display: flex; /* Flexbox  */
+    flex-direction: column; /* Organiza en una columna */
+       padding: 20px; /* Añade espacio alrededor de las columnas */
+    margin: 10px; /* Añade un margen alrededor de las columnas */
+    flex: 1; /* Hace que las columnas se ajusten al ancho disponible */
+    text-align: center; /* Centra el texto */
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de las columnas */
+    align-items: center;
+    background-color: #173D6D;
+    color: #E4E0D4;
+}
+.columnU img {
+    width:fit-content;
+    height: 150px;
+}
+.columnasSF { display: flex; /* Flexbox */ 
+    flex-direction: row; /* Organiza en una fila */ 
+    width: 100%; /* Ancho al 100% */
+     min-width: 100px; /*Ancho mínimo */ 
+  
+     justify-content: space-between; /* Distribuye el espacio entre las columnas */ 
+   
+    } 
+    .columnSF { display: flex; /* Flexbox */ 
+        flex-direction: column; /* Organiza en una columna */ 
+        background-color: #fff; /*Color de fondo */ 
+        padding: 20px; /* Añade espacio alrededor de las columnas */ 
+        margin: 10px; /* Añade un margen alrededor de las columnas */
+         flex: 1  calc(25% - 40px); /* Ajusta el ancho de cada columna */ 
+         text-align: center; /* Centra el texto */ 
+         align-items: center;
+          border-radius: 15px; /* Redondea las esquinas */ 
+          box-shadow: 0 0 10px  rgba(0, 0, 0, 0.5);
+           background-color: #173D6D;
+    color: #E4E0D4;
+    }
+    .columnSF img {
+    max-width: 100%; 
+    height: auto; 
+   padding: 5px;
+}
+.columnasPR { 
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Organiza en una fila */
+    width: 100%; /* Ancho al 100% */
+    min-width: 100px; /*Ancho mínimo */
+    
+    justify-content:center;
+    margin-left: 10px;
+} 
+table.cartelera { 
+    border-collapse: separate; /* Permite el espacio entre celdas */ 
+    align-items: center;
+    border-spacing: 10px; /* Espacio entre celdas */ 
+    width: 100vh; /* Ajusta el ancho de la tabla */ 
+    height: 100%;
+    margin-top: 0px; 
+    padding-right: 50px;
+    padding-left: 50px;
+} 
+.cartelera {
+    flex: 3;
+}
+    th { 
+    border: 1px solid #333; /* Borde de las celdas */ 
+    padding: 10px; /* Espacio interno de las celdas */ 
+    text-align: center; /* Centra el texto */ 
+    background-color: #173D6D; /* Color de fondo de las celdas de encabezado */ 
+    color: #fff; /* Color del texto de las celdas de encabezado */
+}
+    th img {
+    max-width: 200px;
+    max-height: 300px;
+    width: 100%;
+}
+.iconosRedes {
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Organiza en una fila */
+    justify-content: flex-end;/* Alinea el contenido al final del contendor */
+    padding-right: 20px;
+    gap: 20px;
+}
+.filtrar {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+    justify-content: flex-start; /* Alinea al inicio */
+    align-items: center;/* Centra el contenido */
+    text-align: justify;/* Alinea el texto */
+    background-color: #d4bfa2;
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de las columnas */
+    padding: 5px; /* Añade espacio alrededor del contenido */
+    margin: 10px;
+    flex: 0.4; /* Ajusta el ancho de la caja */
+    align-self: flex-start; /* Altura del contenedor */
+    color:#173D6D;
+}
+.filtrar a {
+    color:#fff;/* Color del texto */
+}
+.columnasFP { 
+    display: flex; /* Flexbox */
+    flex-direction: row; /* Organiza en una fila */
+    align-content: space-between;/* Alinea el contenido */
+    width: 95%; /* Ancho al 95% */
+    min-width: 90px; /*Ancho mínimo */
+    margin: 20px;
+    padding: 20px; /* Añade espacio alrededor de las columnas */
+    flex: 1; /* Hace que el contenido principal ocupe el espacio disponible */
+    flex-wrap: wrap;/*Organiza en más de una fila*/
+}
+.ficha {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+    align-self: flex-start;/* Alinea el contenido con el contenedor*/
+    align-items: center;
+    align-content: space-between;/* Alinea el contenido */
+    text-align: center;/* Centra el texto */
+    background-color: #d4bfa2;
+    border-radius: 15px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra alrededor de las columnas */
+    flex: 0.5; /* Ajusta el ancho de la caja */
+    margin: 10px;
+    background-color: #173D6D;
+    color: #E4E0D4;
+}
+.fichaDos {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+    align-self: flex-start;/* Alinea el contenido con el contenedor*/
+    align-items: center;
+    align-content: space-between;/* Alinea el contenido */
+    text-align: center;/* Centra el texto */
+    flex: 0.5; /* Ajusta el ancho de la caja */
+    margin: 10px;
+}
+.fichaTres {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+    align-self: flex-start;/* Alinea el contenido con el contenedor*/
+    align-items: center;
+    align-content: space-between;/* Alinea el contenido */
+    text-align: end;/* Alinea el texto al final del contenedor */
+    flex: 0.25; /* Ajusta el ancho de la caja */
+    margin: 10px;
+    line-height: 1.6;
+}
+.fichaTres h2 {
+    text-align: center;
+}
+.fichaCuatro {
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Organiza en una columna */
+    align-self: flex-start;/* Alinea el contenido con el contenedor*/
+    align-items: center;/* Centra el contenido */
+    align-content: space-between;/* Alinea el contenido */
+    text-align: center;/* Centra el texto */
+    flex: 0.25; /* Ajusta el ancho de la caja */
+    margin: 10px;
+    line-height: 1.6;
+}
+    #reparto {
+    white-space: pre-line;
+    }
+    #reparto-lista {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    }
+    #reparto-lista li {
+    margin-bottom: 10px; /* Añade un margen inferior para separar los nombres */
+    }
+.ficha img {
+    width: 50%;/* Ancho a la mitad */
+    height: auto;
+}
+table.horarios { 
+    width: 100%; 
+    border-collapse: collapse; /* Elimina los espacios entre celdas */ 
+    margin: 20px 0; /* Añade margen superior e inferior */ 
+}
+table.horarios th, table.horarios td {
+    border: 1px solid #333; /* Añade borde a las celdas */ 
+    padding: 10px; /* Añade espacio interno a las celdas */ 
+    text-align: center; /* Centra el texto */ 
+}
+table.horarios th { 
+    background-color: #173D6D; /* Color de fondo de las celdas de encabezado */
+    color: #fff; /* Color del texto de las celdas de encabezado */
+}
+table.horarios td { 
+    background-color: #f2f2f2; /* Color de fondo de las celdas */ 
+}
+
+footer {
+    width: 100%;
+    background-color: #d4bfa2;
+    text-align: center;
+    padding: 5px; /* Añade espacio alrededor del contenido */
+    margin-top: auto; /* Empuja el footer al final */
+}
+
+
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        display:flex ;/* Flexbox */
+        flex-direction: column;/* Organiza en una columna */
+
+      
+    } 
+   
+    .navbar {
+        flex-direction: column; /* Organiza en una columna */
+
+    }
+    .navbar a {
+        padding: 10px; /* Ajusta el espacio de los enlaces */
+        width: 100%; /* Que el ancho de los enlaces ocupe el 100% */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }  
+    .columnas {
+        flex-direction: column; /* Organiza en una columna */
+        width: 100%; /* Que el ancho de los enlaces ocupe el 100% */
+   
+    }
+    .column p img { max-width: 100%; height: auto; /* Mantiene la proporción de la imagen al cambiar el tamaño de la pantalla */ }
+    .columnU img { max-width: 100%; height: auto; /* Mantiene la proporción de la imagen al cambiar el tamaño de la pantalla */ }
+    .columnasSF {
+        flex-direction: column; /* Organiza las columnas en una columna */
+       
+    }
+    
+    .iconoPerro {
+
+        padding-top: 50px;
+    }
+    table.cartelera, th { 
+        display: block; /* Hace que la tabla y las celdas se comporten como bloques */ 
+        width: 100%; /* Ajusta el ancho de las celdas al 100% */ 
+        display: flex;/* Flexbox */
+        flex-direction: column;
+    } 
+    th { 
+        margin-bottom: 10px; /* Añade un margen inferior entre las celdas */ 
+    }
+    .filtrar {
+        flex-direction: column; /* Organiza en una columna */
+
+    }
+    .columnasFP{
+        flex-direction: column;
+    }
+    .ficha {
+        flex-direction: column; 
+
+    }
+    .fichaDos {
+        flex-direction: column; 
+
+    }
+    .fichaTres {
+        flex-direction: column; 
+
+    }
+    .fichaCuatro {
+        flex-direction: column; 
+
+    }
+    table.horarios, table.horarios th, table.horarios td { 
+        display: block; /* Hace que la tabla y las celdas se comporten como bloques */ 
+        width: 100%; /* Ajusta el ancho de las celdas al 100% */
+     } 
+     table.horarios th, table.horarios td { 
+        margin-bottom: 10px; /* Añade un margen inferior entre las celdas */ 
+    }
+    .iconosRedes{
+        display: flex;/* Flexbox */
+            flex-wrap: wrap;/* Organiza en varias filas*/
+            justify-content: center; /* Centra los elementos horizontalmente */ 
+            align-items: center; /* Centra los elementos verticalmente */
+    }
+}
